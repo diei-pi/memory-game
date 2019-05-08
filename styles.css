@@ -1,0 +1,49 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  display: flex;
+  height: 100vh;
+  background-color: green;
+}
+
+.tabuleiro{
+  width: 330px;
+  height: 220px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  perspective: 1000px;
+//  border: 5px solid yellow;
+}
+.carta{
+  width: 100px;
+  height: 100px;
+  margin: 5px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: .5s;
+}
+.carta:active {
+  transform: scale(0.90);
+  transition: transform .0s;
+}
+.carta.virada {
+  transform: rotateY(180deg);
+}
+
+.frente,
+.tras{
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  background: white;
+  position: absolute;
+  backface-visibility: hidden;
+}
+.frente{
+  transform: rotateY(180deg);
+}
