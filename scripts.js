@@ -49,4 +49,14 @@ function resetTravar(){
   [cartaVirada, travar] = [false, false];
   [carta1,carta2] = [null,null];
 }
+function embaralhar() {
+  cartas.forEach(carta => {
+    let posicao = ~~(Math.random() * 12);
+    carta.style.order = posicao;
+  });
+};
+
+
+
+
 cartas.forEach(carta => carta.addEventListener("click", viraCarta));
