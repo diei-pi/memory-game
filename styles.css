@@ -11,8 +11,8 @@ body{
 }
 
 .tabuleiro{
-  width: 330px;
-  height: 220px;
+  width: 440px;
+  height: 330px;
   margin: auto;
   display: flex;
   flex-wrap: wrap;
